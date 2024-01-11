@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(BenimUyg());
+}
+
+class BenimUyg extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.grey,
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Et Lokantası'),
+          backgroundColor: Colors.blueGrey[800],
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Aşşagıdaki menülerden istediginizi seçiniz',
+              style: TextStyle(fontSize:16,
+                  color: Colors.brown[900]),
+            ),
+            SizedBox(height: 20), // Üst kısım boşluk
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/resim1.jpg'), // İlk resim
+                ),
+                SizedBox(width: 20),
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/resim2.jpg'), // İkinci resim
+                ),
+              ],
+            ),
+            SizedBox(height: 20), // Alt kısım boşluk
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/resim3.jpg'), // Üçüncü resim
+                ),
+                SizedBox(width: 20),
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/resim4.jpg'), // Dördüncü resim
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
